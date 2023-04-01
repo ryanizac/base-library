@@ -2,5 +2,9 @@
   "name": "base-library",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "typescript": "^5.0.3"
+  }
 }
