@@ -1,7 +1,22 @@
 {
   "name": "base-library",
+  "description": "A codebase to make libraries",
   "version": "1.0.0",
   "license": "MIT",
+  "author": {
+    "name": "Ryan Izac",
+    "email": "io.ryan@outlook.com",
+    "url": "http://ryanizac.com.br/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanizac/base-library"
+  },
+  "keywords": [
+    "library",
+    "server",
+    "browser"
+  ],
   "type": "module",
   "module": "dist/index.js",
   "main": "dist/index.umd.cjs",
