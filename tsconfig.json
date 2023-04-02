@@ -10,7 +10,7 @@
     "resolveJsonModule": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["node"],
+    "types": ["node", "vitest/globals"],
     "outDir": "./dist"
   },
   "include": ["src/**/*"]
