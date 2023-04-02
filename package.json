@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "test": "vitest",
     "test:watch": "npm run test --watch"
