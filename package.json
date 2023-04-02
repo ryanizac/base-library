@@ -11,11 +11,16 @@
   },
   "scripts": {
     "test": "vitest",
-    "test:watch": "npm run test --watch"
+    "test:watch": "npm run test --watch",
+    "build:esm": "esbuild packages/lib/index.ts --bundle --platform=node --packages=external --outfile=dist/index.js --format=esm",
+    "build:cjs": "npm run build:esm -- --format=cjs --outfile=dist/index.umd.cjs",
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types packages/lib/index.ts",
+    "build": "npm run build:esm && npm run build:cjs && build:types"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
     "@types/node": "^18.15.11",
+    "esbuild": "^0.17.15",
     "typescript": "^5.0.3",
     "vitest": "^0.29.8"
   }
