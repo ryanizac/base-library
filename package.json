@@ -39,10 +39,11 @@
   "scripts": {
     "test": "vitest",
     "test:watch": "npm run test --watch",
+    "clean": "rm -rf dist",
     "build:esm": "esbuild packages/lib/index.ts --bundle --platform=node --packages=external --outfile=dist/index.js --format=esm",
     "build:cjs": "npm run build:esm -- --format=cjs --outfile=dist/index.umd.cjs",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist/types packages/lib/index.ts",
-    "build": "npm run build:esm && npm run build:cjs && build:types"
+    "build": "npm run clean && npm run build:esm && npm run build:cjs && npm run build:types"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
